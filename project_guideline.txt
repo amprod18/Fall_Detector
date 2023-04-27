@@ -1,0 +1,11 @@
+STEPS:
+1- Human detection system
+2- Get info from frames and people
+	- Mass Center
+	- Virtual Grouding Point (point of contact between human ad floor)
+	- Aspect Ratio
+	- Velocity Vector
+	- MC-VGP relation
+	- Area of the subject
+	- Pattern Recreation (for differentiating jumps from falls)
+3-Decision making with info received
