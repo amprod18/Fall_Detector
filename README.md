@@ -1,6 +1,6 @@
 # Fall Detector
 
-As the title suggest its a program which analizes in different manners an image and detects when a person has fallen.
+As the title suggest its a program which analizes an image in different manners and detects when a person has fallen.
 
 This script uses HOGCV (a human detection system from OpenCV) to detect humans in the images (or videos), then uses the boundary information to calculate diferent properties of the person and decide if it has fallen.
 
