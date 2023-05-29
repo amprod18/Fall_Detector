@@ -1,8 +1,27 @@
-# Fall Detector
+# Fall Detection System
 
-As the title suggest its a program which analizes an image in different manners and detects when a person has fallen.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-This script uses HOGCV (a human detection system from OpenCV) to detect humans in the images (or videos), then uses the boundary information to calculate diferent properties of the person and decide if it has fallen.
+## Overview
 
-As a fall detector is pretty bad right now... The HOGCV model is very inconsistent when you play around with light and perspective and very slow for real-time applications. So the script is equiped not for real-time scanning but for image scanning experimentation. It has several function to change the colormap used or analyse the image after a filter (like edge detecting filter, aka Prewitt) has been applied. This way one can analyze the performance of each colormap and filter to determine if it is better to use some of this filters below.
-The script also has a function to test 22 colormaps sequentially or threadedly to see if multiple threads result in better performance. In my case, using 4 threads gained around 25%-30% in time which might have future in real-time applications. Also havibng various threads would convert the script to a time dependant script and it means that coordination and synchronism beetwen threads is a must.
+The Fall Detection System is an image processing project developed as a part of a university project. It utilizes the HOGCV AI algorithm (a human detection system from OpenCV) to identify people in images or videos and then applies various techniques to determine if a person is falling or not. The project includes an evaluation of different image processing approaches to measure speed and precision, such as applying colormaps, multithreading and different filters. Additionally, a comprehensive report presenting the results is available in the repository.
+
+## Features
+
+- Integration of the HOGCV AI algorithm for person detection.
+- Implementation of various image processing techniques to assess fall detection performance.
+- Comparative analysis of different approaches, including colormaps, multithreading, and filters.
+- Inclusion of a detailed report documenting the project's findings.
+<p align="center">
+  <img src="https://github.com/amprod18/Fall_Detector/blob/main/dataset/test_image1.jpg" alt="input_image" height="200 px" length="200 px"><img src="https://github.com/amprod18/Fall_Detector/blob/main/processed/test_image1_checked.jpg" alt="processed_image" height="200 px" length="200 px">
+</p>
+
+## Future Enhancements
+
+- Usage of a better human detector as the HOGCV model is very inconsistent when you play around with light and perspective.
+- Speed: Even when using multithreading the program reached around 2-3 fps which would not yield good results in real-time applications.
+- Having various threads would convert the script to a time dependant script, which means that coordination and synchronism beetwen threads is a must.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
